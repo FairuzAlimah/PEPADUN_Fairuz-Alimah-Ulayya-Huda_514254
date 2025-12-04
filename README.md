@@ -12,7 +12,7 @@ Slogan “Sai Bumi, Sai Data UMKM” bermakna bahwa seluruh UMKM dalam satu bumi
 
 >**Komponen Pembangun**
 >
->Aplikasi PEPADUN ini dikembangkan menggunakan berbagai teknologi modern yang mendukung performa, fleksibilitas, serta kemudahan integrasi. Pondasi aplikasi dibangun dengan _React Native_ sebagai _framework_ utama, sementara sistem navigasi menggunakan _expo-router_ agar struktur halaman lebih rapi dan modular. Seluruh data UMKM yang mulai dari nama, kategori, foto, kontak, hingga koordinat lokasi dapat disimpan pada _Firebase Realtime Database_ sehingga perubahan data dapat muncul secara _real-time_ di seluruh perangkat. Autentikasi pengguna dikelola oleh _Firebase Auth_, dan tampilan visual memanfaatkan _expo-image_, ikon dari _Expo Vector Icons_, serta dukungan _Dark–Light Mode_ agar responsif terhadap preferensi pengguna. Pada fitur geospasial, aplikasi menggunakan _react-native-map_s dan modul _expo-locatio_n untuk menampilkan peta digital, menandai lokasi UMKM, serta mendeteksi posisi pengguna, sehingga visualisasi spasial dapat dilakukan secara langsung melalui perangkat mobile.
+>Aplikasi PEPADUN ini dikembangkan menggunakan berbagai teknologi modern yang mendukung performa, fleksibilitas, serta kemudahan integrasi. Pondasi aplikasi dibangun dengan _React Native_ sebagai _framework_ utama, sementara sistem navigasi menggunakan _expo-router_ agar struktur halaman lebih rapi dan modular. Seluruh data UMKM yang mulai dari nama, kategori, foto, kontak, hingga koordinat lokasi dapat disimpan pada _Firebase Realtime Database_ sehingga perubahan data dapat muncul secara _real-time_ di seluruh perangkat. Autentikasi pengguna dikelola oleh _Firebase Auth_, dan tampilan visual memanfaatkan _expo-image_, ikon dari _Expo Vector Icons_, serta dukungan _Dark–Light Mode_ agar responsif terhadap preferensi pengguna. Pada fitur geospasial, aplikasi menggunakan _react-native-maps_ dan modul _expo-location_ untuk menampilkan peta digital, menandai lokasi UMKM, serta mendeteksi posisi pengguna, sehingga visualisasi spasial dapat dilakukan secara langsung melalui perangkat _mobile_.
 >
 >Selain itu, aplikasi ini dilengkapi dengan sistem komponen yang tersusun dari beberapa halaman utama, seperti halaman _login_ yang mendukung mode _Guest_, _dashboard_ dengan statistik usaha, halaman lokasi dan daftar UMKM, serta halaman peta interaktif. Pengguna yang masuk sebagai _Guest_ hanya dapat melihat data UMKM tanpa hak untuk menambah, meng-_edit_, atau menghapus data, sehingga menjaga integritas informasi. Sebaliknya, pengguna yang telah _login_ atau terdaftar memiliki akses penuh untuk mengelola data, termasuk fitur _edit_ dan _delete_ langsung dari halaman detail atau lokasi. Fitur-fitur tambahan seperti _search bar_, filter kategori, kartu statistik, FAB di peta, hingga halaman profil memberikan pengalaman penggunaan yang lengkap dan intuitif. Kehadiran mode tampilan gelap (_dark mode_) dan terang (_light mode_) juga meningkatkan kenyamanan visual, membuat aplikasi ini fungsional sekaligus ramah pengguna dalam berbagai kondisi.
 
@@ -22,17 +22,38 @@ Slogan “Sai Bumi, Sai Data UMKM” bermakna bahwa seluruh UMKM dalam satu bumi
 >Sumber data UMKM pada aplikasi ini diperoleh melalui proses _scraping_ dari _Google Maps_, yang digunakan untuk mengambil informasi dasar seperti nama UMKM, kategori usaha, koordinat lokasi, foto tempat, serta kontak apabila tersedia. Metode ini dipilih karena mampu menyediakan data yang cukup lengkap dan aktual mengenai persebaran UMKM di wilayah Bandar Lampung. Data hasil _scraping_ kemudian disimpan dan diolah dalam _Firebase Realtime Database_ agar dapat ditampilkan secara _real-time_ pada aplikasi.
 
 
->>**Tangkapan Layar Komponen Penting pada Website**
->>_Dark Mode_
->>
->![Halaman Login](foto/login_dark.jpg)
->
->![Dashboard](foto/home_dark.jpg)
->
->![Halaman Explore](foto/explore_dark.jpg)
->
->>![Lokasi](foto/lokasi_dark.jpg)
->>
->![Peta Interaktif](foto/peta_dark.jpg)
+## Tangkapan Layar Komponen Penting pada Aplikasi PEPADUN
 
->>
+<b><i>Dark Mode</i></b>
+
+<p align="center">
+  <img src="foto/login_dark.jpg" width="210"/>
+  <img src="foto/home_dark.jpg" width="210"/>
+  <img src="foto/explore_dark.jpg" width="210"/>
+</p>
+
+<p align="center">
+  <img src="foto/lokasi_dark.jpg" width="210"/>
+  <img src="foto/peta_dark.jpg" width="210"/>
+</p>
+
+<br>
+
+<b><i>Light Mode</i></b>
+
+<p align="center">
+  <img src="foto/login_light.jpg" width="210"/>
+  <img src="foto/home_light.jpg" width="210"/>
+  <img src="foto/explore_light.jpg" width="210"/>
+</p>
+
+<p align="center">
+  <img src="foto/lokasi_light.jpg" width="210"/>
+  <img src="foto/peta_light.jpg" width="210"/>
+</p>
+
+<br>
+
+
+<h3 align="center">"Sai Bumi, Sai Data UMKM"</h3>
+
