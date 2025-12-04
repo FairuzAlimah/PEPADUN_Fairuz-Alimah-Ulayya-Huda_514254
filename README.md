@@ -1,73 +1,34 @@
-# Welcome to your Expo app 👋
+# PEPADUN - Platform Ekonomi Pelaku Usaha Daerah untuk Bandar Lampung
+**"Sai Bumi, Sai Data UMKM"**
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+PEPADUN adalah akronim dari “_Platform_ Ekonomi Pelaku Usaha Daerah untuk Bandar Lampung”, yang terinspirasi dari ‘pepadun’ merujuk pada kursi adat Lampung sebagai simbol martabat dan kepemimpinan. Nama ini mencerminkan fungsi aplikasi sebagai pusat informasi UMKM yang terstruktur, mudah diakses, dan disajikan secara terpeta sehingga membantu masyarakat menemukan usaha lokal serta memperkuat ekosistem ekonomi daerah.
 
-## Get started
+Slogan “Sai Bumi, Sai Data UMKM” bermakna bahwa seluruh UMKM dalam satu bumi yaitu Bandar Lampung dihimpun menjadi satu kesatuan data yang rapi, terintegrasi, dan mudah diakses melalui satu _platform_.
 
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-   ## Authentication (Login/Register)
-
-   This project now includes a simple Firebase Authentication flow with the following pages:
-   - `app/login.tsx` — email + password login and "Login as Guest" button (anonymous sign-in)
-   - `app/register.tsx` — register a new user with email + password
-
-   New feature:
-   - `app/(tabs)/map.tsx` — Map tab using `react-native-maps` (Google provider)
-
-   To enable authentication, install Firebase and start the app:
-
-   ```bash
-   npm install firebase
-   npx expo start
-   ```
-
-   Notes:
-   - Firebase config is already present in `lib/firebase.ts` for convenience. You should replace it with environment variables for production.
-   - After successful login (or guest login), the app redirects to the main tabs (`/`).
-   - Map tab is available in the bottom tabs after login. It uses `react-native-maps` and defaults to the Google provider on platforms that support it. To fully use Google Maps on Android, follow `react-native-maps` setup and add an API key if needed.
-   - Use the Sign out button on the Home tab to sign out and get redirected back to the login screen.
+>**Tujuan Pembuatan Aplikasi _Mobile_**
+>
+> Aplikasi ini bertujuan untuk meningkatkan keterbukaan data UMKM melalui pusat data yang terstruktur, terpadu, dan mudah diakses oleh masyarakat maupun pemangku kepentingan. Dengan menyediakan visualisasi spasial dalam bentuk peta digital, aplikasi ini memudahkan pengguna dalam menemukan lokasi UMKM, memahami persebarannya, serta melakukan analisis berbasis wilayah secara lebih intuitif. Selain itu, aplikasi ini juga memperkuat visibilitas para pelaku UMKM, sehingga usaha mereka dapat lebih dikenal dan terjangkau oleh publik. Bagi pemerintah, keberadaan aplikasi ini menjadi sarana pendukung dalam pendataan, _monitoring_, dan perencanaan kebijakan ekonomi daerah yang lebih tepat sasaran, berbasis data spasial dan kondisi riil di lapangan. Dengan demikian, aplikasi ini memberikan manfaat yang signifikan baik bagi pelaku usaha, masyarakat, maupun instansi pengelola data.
 
 
-In the output, you'll find options to open the app in a
+>**Komponen Pembangun**
+>
+>Aplikasi PEPADUN ini dikembangkan menggunakan berbagai teknologi modern yang mendukung performa, fleksibilitas, serta kemudahan integrasi. Pondasi aplikasi dibangun dengan _React Native_ sebagai _framework_ utama, sementara sistem navigasi menggunakan _expo-router_ agar struktur halaman lebih rapi dan modular. Seluruh data UMKM yang mulai dari nama, kategori, foto, kontak, hingga koordinat lokasi dapat disimpan pada _Firebase Realtime Database_ sehingga perubahan data dapat muncul secara _real-time_ di seluruh perangkat. Autentikasi pengguna dikelola oleh _Firebase Auth_, dan tampilan visual memanfaatkan _expo-image_, ikon dari _Expo Vector Icons_, serta dukungan _Dark–Light Mode_ agar responsif terhadap preferensi pengguna. Pada fitur geospasial, aplikasi menggunakan _react-native-map_s dan modul _expo-locatio_n untuk menampilkan peta digital, menandai lokasi UMKM, serta mendeteksi posisi pengguna, sehingga visualisasi spasial dapat dilakukan secara langsung melalui perangkat mobile.
+>
+>Selain itu, aplikasi ini dilengkapi dengan sistem komponen yang tersusun dari beberapa halaman utama, seperti halaman _login_ yang mendukung mode _Guest_, _dashboard_ dengan statistik usaha, halaman lokasi dan daftar UMKM, serta halaman peta interaktif. Pengguna yang masuk sebagai _Guest_ hanya dapat melihat data UMKM tanpa hak untuk menambah, meng-_edit_, atau menghapus data, sehingga menjaga integritas informasi. Sebaliknya, pengguna yang telah _login_ atau terdaftar memiliki akses penuh untuk mengelola data, termasuk fitur _edit_ dan _delete_ langsung dari halaman detail atau lokasi. Fitur-fitur tambahan seperti _search bar_, filter kategori, kartu statistik, FAB di peta, hingga halaman profil memberikan pengalaman penggunaan yang lengkap dan intuitif. Kehadiran mode tampilan gelap (_dark mode_) dan terang (_light mode_) juga meningkatkan kenyamanan visual, membuat aplikasi ini fungsional sekaligus ramah pengguna dalam berbagai kondisi.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+>**Sumber Data**
+>
+>Sumber data UMKM pada aplikasi ini diperoleh melalui proses _scraping_ dari _Google Maps_, yang digunakan untuk mengambil informasi dasar seperti nama UMKM, kategori usaha, koordinat lokasi, foto tempat, serta kontak apabila tersedia. Metode ini dipilih karena mampu menyediakan data yang cukup lengkap dan aktual mengenai persebaran UMKM di wilayah Bandar Lampung. Data hasil _scraping_ kemudian disimpan dan diolah dalam _Firebase Realtime Database_ agar dapat ditampilkan secara _real-time_ pada aplikasi.
 
-## Get a fresh project
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+>>**Tangkapan Layar Komponen Penting pada Website**
+>>_Dark Mode_
+>![Halaman Awal](foto/halamanawal1.png)
+>![Halaman Awal](foto/halamanawal2.png)
+>![Peta Interaktif](foto/peta.png)
+>>![form input](foto/form.png)
+>![Tabel Data](foto/tabel1.png)
+>![Tabel Data](foto/tabel2.png)
+>![Halaman Lain](foto/kedaton.png)
+>>
