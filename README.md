@@ -25,11 +25,14 @@ Slogan “Sai Bumi, Sai Data UMKM” bermakna bahwa seluruh UMKM dalam satu bumi
 >>**Tangkapan Layar Komponen Penting pada Website**
 >>_Dark Mode_
 >>
->![Halaman Login](foto/login_dark.png)
->![Dashboard](foto/home_dark.png)
->![Halaman Explore](foto/explore_dark.png)
->>![Lokasi](foto/lokasi_dark.png)
->![Peta Interaktif](foto/peta_dark.png)
->![Tabel Data](foto/tabel2.png)
->![Halaman Lain](foto/kedaton.png)
+>![Halaman Login](foto/login_dark.jpg)
+>
+>![Dashboard](foto/home_dark.jpg)
+>
+>![Halaman Explore](foto/explore_dark.jpg)
+>
+>>![Lokasi](foto/lokasi_dark.jpg)
+>>
+>![Peta Interaktif](foto/peta_dark.jpg)
+
 >>
