@@ -5,8 +5,9 @@
 
 import { Platform } from 'react-native';
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+// Primary tint colors for the app: set to deep red for light mode and soft yellow for dark mode
+const tintColorLight = '#B00020'; // deep red used in light mode
+const tintColorDark = '#FFD966'; // soft yellow used in dark mode
 
 export const Colors = {
   light: {

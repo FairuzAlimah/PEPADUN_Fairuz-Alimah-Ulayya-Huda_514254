@@ -13,6 +13,8 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarInactiveTintColor: Colors[colorScheme ?? 'light'].tabIconDefault,
+        tabBarStyle: { backgroundColor: Colors[colorScheme ?? 'light'].background },
         headerShown: false,
         tabBarButton: HapticTab,
       }}>
@@ -30,6 +32,28 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="lokasi"
+        options={{
+          title: 'Lokasi',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="lokasi.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="gmaps"
+        options={{
+          title: 'Peta',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="map.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="profile.fill" color={color} />,
+        }}
+      />
     </Tabs>
+    
   );
 }

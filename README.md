@@ -16,6 +16,29 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npx expo start
    ```
 
+   ## Authentication (Login/Register)
+
+   This project now includes a simple Firebase Authentication flow with the following pages:
+   - `app/login.tsx` — email + password login and "Login as Guest" button (anonymous sign-in)
+   - `app/register.tsx` — register a new user with email + password
+
+   New feature:
+   - `app/(tabs)/map.tsx` — Map tab using `react-native-maps` (Google provider)
+
+   To enable authentication, install Firebase and start the app:
+
+   ```bash
+   npm install firebase
+   npx expo start
+   ```
+
+   Notes:
+   - Firebase config is already present in `lib/firebase.ts` for convenience. You should replace it with environment variables for production.
+   - After successful login (or guest login), the app redirects to the main tabs (`/`).
+   - Map tab is available in the bottom tabs after login. It uses `react-native-maps` and defaults to the Google provider on platforms that support it. To fully use Google Maps on Android, follow `react-native-maps` setup and add an API key if needed.
+   - Use the Sign out button on the Home tab to sign out and get redirected back to the login screen.
+
+
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
